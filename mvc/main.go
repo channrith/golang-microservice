@@ -3,13 +3,13 @@ package main
 import (
 	"net/http"
 
-	app "github.com/channrith/golang-microservice/mvc/router"
+	"github.com/channrith/golang-microservice/mvc/app"
 )
 
 func main() {
-	r := app.StartApp()
+	app.StartApp()
 
-	if err := http.ListenAndServe(":8080", r); err != nil {
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
 	}
 }
