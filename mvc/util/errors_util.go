@@ -1,4 +1,4 @@
-package utils
+package util
 
 type ApplicationError struct {
 	StatusCode int    `json:"status"`
